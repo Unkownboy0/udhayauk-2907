@@ -55,12 +55,6 @@ export function Portfolio() {
             >
               <Card className="overflow-hidden hover:scale-[1.02] transition-all duration-300 border-card-border hover-elevate">
                 <div className="aspect-video relative overflow-hidden bg-muted">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    loading="lazy"
-                  />
                 </div>
               </Card>
             </a>
