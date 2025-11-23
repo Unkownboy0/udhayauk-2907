@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { SiMedium, SiLinkedin, SiYoutube, SiInstagram } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
 import { HandIcon } from "lucide-react";
+import profileImage from "@assets/WhatsApp_Image_2025-11-20_at_20.06.59_13b777e6-removebg-preview_1763908015110.png";
 
 export function Hero() {
   return (
@@ -132,9 +133,11 @@ export function Hero() {
             <div className="relative">
               {/* Profile Image */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-cyan/20 flex items-center justify-center">
-                  <div className="w-full h-full bg-muted/10 rounded-full" />
-                </div>
+                <img
+                  src={profileImage}
+                  alt="Karthikeyan V Profile"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating Tech Icons */}
