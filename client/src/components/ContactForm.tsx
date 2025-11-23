@@ -70,6 +70,7 @@ export function ContactForm() {
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Get In Touch
           </h2>
+          <div className="w-32 h-1 bg-cyan mx-auto mb-4" />
           <p className="text-muted-foreground text-lg">
             Interested in our courses or have questions? Fill out the form below
             and we'll get back to you soon.

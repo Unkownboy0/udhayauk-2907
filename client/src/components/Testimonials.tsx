@@ -62,6 +62,7 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold">Testimonials and Feedback</h2>
+          <div className="w-32 h-1 bg-cyan mx-auto mt-4" />
         </div>
 
         <div className="max-w-4xl mx-auto">
