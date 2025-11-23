@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { SiMedium, SiLinkedin, SiYoutube, SiInstagram, SiKalilinux, SiAndroid, SiLinux, SiPython } from "react-icons/si";
+import { SiMedium, SiLinkedin, SiYoutube, SiInstagram, SiKalilinux, SiAndroid, SiLinux, SiPython, SiDocker, SiGit, SiBurpsuite } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-import { HandIcon, Shield, Terminal } from "lucide-react";
+import { HandIcon, Shield, Terminal, Code2, Zap, Lock, Cpu } from "lucide-react";
 import profileImage from "@assets/WhatsApp_Image_2025-11-20_at_20.06.59_13b777e6-removebg-preview_1763908015110.png";
 
 export function Hero() {
@@ -141,17 +141,59 @@ export function Hero() {
               </div>
 
               {/* Floating Tech Icons */}
+              {/* Top Right - Security Shield */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float">
                 <Shield className="w-8 h-8 text-primary" />
               </div>
+              
+              {/* Top Left - Python */}
+              <div className="absolute -top-2 -left-8 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-150">
+                <SiPython className="w-7 h-7 text-cyan" />
+              </div>
+              
+              {/* Left Top - Kali Linux */}
               <div className="absolute top-1/4 -left-6 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-100">
                 <SiKalilinux className="w-7 h-7 text-cyan" />
               </div>
-              <div className="absolute bottom-1/4 -right-8 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200">
+              
+              {/* Left Middle - Terminal */}
+              <div className="absolute left-1/2 -left-12 top-1/2 -translate-y-1/2 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-250">
                 <Terminal className="w-7 h-7 text-primary" />
               </div>
-              <div className="absolute -bottom-6 left-1/4 w-16 h-16 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-300">
+              
+              {/* Left Bottom - Docker */}
+              <div className="absolute bottom-1/4 -left-8 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-350">
+                <SiDocker className="w-7 h-7 text-cyan" />
+              </div>
+              
+              {/* Bottom Left - Git */}
+              <div className="absolute -bottom-4 left-1/3 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200">
+                <SiGit className="w-7 h-7 text-primary" />
+              </div>
+              
+              {/* Bottom Right - Android */}
+              <div className="absolute -bottom-6 right-1/4 w-16 h-16 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-300">
                 <SiAndroid className="w-8 h-8 text-cyan" />
+              </div>
+              
+              {/* Right Bottom - Code */}
+              <div className="absolute bottom-1/4 -right-8 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200">
+                <Code2 className="w-7 h-7 text-primary" />
+              </div>
+              
+              {/* Right Middle - Lock */}
+              <div className="absolute right-1/2 -right-12 top-1/2 -translate-y-1/2 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400">
+                <Lock className="w-7 h-7 text-cyan" />
+              </div>
+              
+              {/* Right Top - Cpu */}
+              <div className="absolute top-1/4 -right-6 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-50">
+                <Cpu className="w-7 h-7 text-primary" />
+              </div>
+              
+              {/* Top Center - Linux */}
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-400">
+                <SiLinux className="w-7 h-7 text-cyan" />
               </div>
             </div>
           </div>
