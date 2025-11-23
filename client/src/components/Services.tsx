@@ -5,10 +5,37 @@ import { useQuery } from "@tanstack/react-query";
 import type { Service } from "@shared/schema";
 
 const iconMap = {
-  shield: <Shield className="w-12 h-12 text-primary" />,
-  code: <Code className="w-12 h-12 text-cyan" />,
-  smartphone: <Smartphone className="w-12 h-12 text-primary" />,
-  cpu: <Cpu className="w-12 h-12 text-cyan" />,
+  shield: <Shield className="w-12 h-12 text-red-500" />,
+  code: <Code className="w-12 h-12 text-blue-500" />,
+  smartphone: <Smartphone className="w-12 h-12 text-purple-500" />,
+  cpu: <Cpu className="w-12 h-12 text-cyan-500" />,
+};
+
+const colorMap: Record<string, { bg: string; border: string; icon: string; glow: string }> = {
+  shield: {
+    bg: "bg-gradient-to-br from-red-900/20 to-red-800/10",
+    border: "border-red-500/30",
+    icon: "text-red-500",
+    glow: "hover:shadow-red-500/20"
+  },
+  code: {
+    bg: "bg-gradient-to-br from-blue-900/20 to-blue-800/10",
+    border: "border-blue-500/30",
+    icon: "text-blue-500",
+    glow: "hover:shadow-blue-500/20"
+  },
+  smartphone: {
+    bg: "bg-gradient-to-br from-purple-900/20 to-purple-800/10",
+    border: "border-purple-500/30",
+    icon: "text-purple-500",
+    glow: "hover:shadow-purple-500/20"
+  },
+  cpu: {
+    bg: "bg-gradient-to-br from-cyan-900/20 to-cyan-800/10",
+    border: "border-cyan-500/30",
+    icon: "text-cyan-500",
+    glow: "hover:shadow-cyan-500/20"
+  },
 };
 
 export function Services() {
@@ -58,21 +85,24 @@ export function Services() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 animate-in fade-in duration-700">
-          {services.map((service, index) => (
-            <Card
-              key={service.id}
-              className="p-4 sm:p-6 lg:p-8 hover:scale-[1.02] transition-all duration-300 hover-elevate border-card-border animate-in fade-in slide-in-from-bottom"
-              style={{
-                animationDelay: `${index * 100}ms`,
-                animationFillMode: 'both'
-              }}
-              data-testid={`card-service-${index}`}
-            >
-              <div className="mb-4 sm:mb-6">{iconMap[service.icon as keyof typeof iconMap]}</div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">{service.title}</h3>
-              <p className="text-xs sm:text-sm lg:text-base text-muted-foreground leading-relaxed">{service.description}</p>
-            </Card>
-          ))}
+          {services.map((service, index) => {
+            const colors = colorMap[service.icon as keyof typeof colorMap] || colorMap.shield;
+            return (
+              <Card
+                key={service.id}
+                className={`p-4 sm:p-6 lg:p-8 hover:scale-[1.03] transition-all duration-500 hover-elevate border ${colors.border} ${colors.bg} animate-in fade-in slide-in-from-bottom group`}
+                style={{
+                  animationDelay: `${index * 100}ms`,
+                  animationFillMode: 'both'
+                }}
+                data-testid={`card-service-${index}`}
+              >
+                <div className="mb-4 sm:mb-6 transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">{iconMap[service.icon as keyof typeof iconMap]}</div>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4 text-foreground">{service.title}</h3>
+                <p className="text-xs sm:text-sm lg:text-base text-foreground/80 leading-relaxed">{service.description}</p>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
