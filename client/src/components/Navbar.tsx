@@ -38,9 +38,6 @@ export function Navbar() {
             <a href="#services" className="text-foreground hover:text-primary transition-colors" data-testid="link-services">
               Services
             </a>
-            <a href="#courses" className="text-foreground hover:text-primary transition-colors" data-testid="link-courses">
-              Courses
-            </a>
             <a href="#portfolio" className="text-foreground hover:text-primary transition-colors" data-testid="link-portfolio">
               Portfolio
             </a>
