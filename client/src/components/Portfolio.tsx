@@ -44,7 +44,7 @@ export function Portfolio() {
 
           <div className="flex flex-col md:flex-row gap-8">
             <div className="text-center">
-              <h3 className="text-4xl font-bold text-primary">10</h3>
+              <h3 className="text-4xl font-bold text-primary">03+</h3>
               <p className="text-sm text-muted-foreground">Years Of Experience</p>
             </div>
             <div className="text-center">
