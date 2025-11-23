@@ -1,0 +1,102 @@
+{
+  "colorScheme": "dark",
+  "fonts": [
+    {
+      "family": "DM Sans",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#5933D3",
+    "accent": "#5933D3",
+    "background": "#050505",
+    "textPrimary": "#050505",
+    "link": "#0D0A1A"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "DM Sans",
+      "heading": "DM Sans"
+    },
+    "fontStacks": {
+      "heading": [
+        "DM Sans",
+        "sans-serif"
+      ],
+      "body": [
+        "DM Sans",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "DM Sans",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "48px",
+      "h2": "24px",
+      "body": "30px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "0px"
+  },
+  "components": {
+    "input": {
+      "borderColor": "#CCCCCC",
+      "borderRadius": "0px"
+    },
+    "buttonPrimary": {
+      "background": "#5933D3",
+      "textColor": "#E8E8E8",
+      "borderColor": "#E8E8E8",
+      "borderRadius": "9999px",
+      "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.25) 0px 25px 50px -12px"
+    },
+    "buttonSecondary": {
+      "background": "#050505",
+      "textColor": "#E8E8E8",
+      "borderRadius": "0px",
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.svg",
+    "favicon": "https://karthithehacker.com/favicon.ico",
+    "ogImage": "https://karthithehacker.com/assets/logo.png"
+  },
+  "__framework_hints": [],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Logo #0 is visible in the header and matches the brand name 'Karthithehacker', making it the best candidate for the brand logo.",
+    "confidence": 0.9
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 0,
+      "text": "Roadmaps",
+      "reasoning": "Button #0 has a vibrant blue background (#5933D3) and action-oriented text 'Roadmaps', making it the primary call-to-action."
+    },
+    "secondary": {
+      "index": 3,
+      "text": "social engineering tool",
+      "reasoning": "Button #3 has a dark background (#050505) and is less prominent, making it suitable as a secondary action compared to the primary button."
+    },
+    "confidence": 0.95
+  },
+  "personality": {
+    "tone": "modern",
+    "energy": "medium",
+    "targetAudience": "tech-savvy individuals interested in hacking and cybersecurity."
+  },
+  "designSystem": {
+    "framework": "tailwind",
+    "componentLibrary": null
+  },
+  "confidence": {
+    "buttons": 0.95,
+    "colors": 0.9,
+    "overall": 0.925
+  }
+}
