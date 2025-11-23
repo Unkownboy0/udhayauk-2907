@@ -89,9 +89,6 @@ export function Navbar() {
             <a href="#portfolio" onClick={closeMenu} className="block px-6 py-2 text-foreground hover:text-cyan hover:bg-background transition-colors font-medium" data-testid="mobile-link-portfolio">
               Portfolio
             </a>
-            <a href="#achievements" onClick={closeMenu} className="block px-6 py-2 text-foreground hover:text-cyan hover:bg-background transition-colors font-medium" data-testid="mobile-link-achievements">
-              Achievements
-            </a>
             <a href="#testimonials" onClick={closeMenu} className="block px-6 py-2 text-foreground hover:text-cyan hover:bg-background transition-colors font-medium" data-testid="mobile-link-testimonials">
               Testimonials
             </a>
