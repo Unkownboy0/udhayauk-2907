@@ -36,55 +36,5 @@ export function BugReports() {
     );
   }
 
-  // Duplicate for seamless infinite scroll
-  const duplicatedCompanies = [...companies, ...companies];
-
-  return (
-    <section className="py-24 bg-background/50 overflow-hidden" data-testid="section-bug-reports">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
-          <h3 className="text-2xl lg:text-3xl font-bold mb-2">Bug Reports for Top Brands</h3>
-        </div>
-
-        {/* First Row - Scroll Left */}
-        <div className="relative mb-8">
-          <div className="flex gap-12 animate-scroll-left">
-            {duplicatedCompanies.map((company, index) => (
-              <div
-                key={`${company.name}-${index}-row1`}
-                className="flex-shrink-0 w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100"
-                data-testid={`logo-company-${company.name.toLowerCase().replace(/\s+/g, '-')}-${index}`}
-              >
-                <img
-                  src={company.image}
-                  alt={company.name}
-                  className="max-w-full max-h-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Second Row - Scroll Right */}
-        <div className="relative">
-          <div className="flex gap-12 animate-scroll-right">
-            {duplicatedCompanies.map((company, index) => (
-              <div
-                key={`${company.name}-${index}-row2`}
-                className="flex-shrink-0 w-32 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all opacity-60 hover:opacity-100"
-              >
-                <img
-                  src={company.image}
-                  alt={company.name}
-                  className="max-w-full max-h-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  return null;
 }
