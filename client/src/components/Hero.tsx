@@ -159,7 +159,7 @@ export function Hero() {
               </div>
               
               {/* Bottom Left - Line */}
-              <div className="absolute -bottom-4 left-1/3 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-green-500/50">
+              <div className="absolute -bottom-4 left-1/3 w-14 h-14 bg-gray-700 rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200 hover:shadow-green-500/50 text-[15px]">
                 <div className="w-6 h-6 text-white font-bold text-lg">L</div>
               </div>
               
