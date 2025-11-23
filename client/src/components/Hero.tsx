@@ -15,7 +15,6 @@ export function Hero() {
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
       </div>
-
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text */}
@@ -49,10 +48,7 @@ export function Hero() {
               </svg>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              CEO of Cappricio Securities, a cybersecurity firm in Chennai, India. I specialize in ethical hacking,
-              securing platforms like Android OS, Google, and Microsoft from vulnerabilities and threats.
-            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">CEO & Founder of Geetorus Cybersecurity in Erode, India. I specialize in ethical hacking, securing web and mobile platforms, developing security tools, and providing cyber awareness through workshops and seminars. My focus is to find vulnerabilities, prevent attacks, and build a safer digital pace.             </p>
 
             <div>
               <p className="text-sm text-muted-foreground mb-3">Follow me</p>
