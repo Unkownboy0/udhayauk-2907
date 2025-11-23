@@ -27,7 +27,7 @@ export function Navbar() {
       data-testid="navbar"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 text-center">
           <div className="hidden md:flex items-center gap-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors" data-testid="link-home">
               Home
