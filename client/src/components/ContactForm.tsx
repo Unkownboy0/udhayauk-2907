@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@lib/queryClient";
+import { apiRequest } from "@/lib/queryClient";
 import type { ContactFormInsert } from "@shared/schema";
 
 export function ContactForm() {
