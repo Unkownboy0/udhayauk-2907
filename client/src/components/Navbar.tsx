@@ -28,11 +28,6 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-2" data-testid="link-logo">
-            <Moon className="w-6 h-6 text-foreground" />
-            <span className="font-bold text-lg">Karthithehacker</span>
-          </a>
-
           <div className="hidden md:flex items-center gap-8">
             <a href="#home" className="text-foreground hover:text-primary transition-colors" data-testid="link-home">
               Home
