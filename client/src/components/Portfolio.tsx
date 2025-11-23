@@ -34,9 +34,9 @@ export function Portfolio() {
 
   return (
     <section id="portfolio" className="py-24 bg-background" data-testid="section-portfolio">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* Stats Section */}
-        <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-12 sm:mb-16 gap-4 sm:gap-8">
           <div className="flex items-center gap-3 bg-card border border-border rounded-full px-4 py-2">
             <Code2 className="w-5 h-5 text-cyan" />
             <span className="text-sm font-semibold">GitHub Projects</span>

@@ -15,19 +15,19 @@ export function Hero() {
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
       </div>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-24 lg:py-32 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column - Text */}
-          <div className="space-y-6 animate-in fade-in slide-in-from-left duration-700">
+          <div className="space-y-4 sm:space-y-6 animate-in fade-in slide-in-from-left duration-700">
             <div className="flex items-center gap-2">
-              <HandIcon className="w-8 h-8 text-cyan" />
-              <span className="text-lg text-muted-foreground">
+              <HandIcon className="w-6 sm:w-8 h-6 sm:h-8 text-cyan" />
+              <span className="text-base sm:text-lg text-muted-foreground">
                 Hi, I'm <span className="text-cyan font-semibold">Udhayakumar</span>
               </span>
             </div>
 
             <div className="relative inline-block">
-              <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight">
+              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold leading-tight">
                 Cybersecurity
                 <br />
                 Researcher and
@@ -48,11 +48,11 @@ export function Hero() {
               </svg>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">CEO & Founder of Geetorus Cybersecurity in Erode, India. I specialize in ethical hacking, securing web and mobile platforms, developing security tools, and providing cyber awareness through workshops and seminars. My focus is to find vulnerabilities, prevent attacks, and build a safer digital pace.             </p>
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl">CEO & Founder of Geetorus Cybersecurity in Erode, India. I specialize in ethical hacking, securing web and mobile platforms, developing security tools, and providing cyber awareness through workshops and seminars. My focus is to find vulnerabilities, prevent attacks, and build a safer digital pace.</p>
 
             <div>
-              <p className="text-sm text-muted-foreground mb-3">Follow me</p>
-              <div className="flex items-center gap-4">
+              <p className="text-xs sm:text-sm text-muted-foreground mb-3">Follow me</p>
+              <div className="flex items-center gap-2 sm:gap-4 flex-wrap">
                 <a
                   href="https://medium.com"
                   target="_blank"
@@ -122,7 +122,7 @@ export function Hero() {
           <div className="relative flex justify-center items-center animate-in fade-in slide-in-from-right duration-700 delay-300">
             <div className="relative">
               {/* Profile Image */}
-              <div className="relative w-96 h-96 lg:w-[28rem] lg:h-[28rem]">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[28rem] lg:h-[28rem] mx-auto">
                 <img
                   src={profileImage}
                   alt="Udhayakumar Profile"
