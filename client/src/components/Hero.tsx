@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { SiMedium, SiLinkedin, SiYoutube, SiInstagram } from "react-icons/si";
+import { SiMedium, SiLinkedin, SiYoutube, SiInstagram, SiKalilinux } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
 import { HandIcon } from "lucide-react";
 import profileImage from "@assets/WhatsApp_Image_2025-11-20_at_20.06.59_13b777e6-removebg-preview_1763908015110.png";
@@ -145,7 +145,7 @@ export function Hero() {
                 <div className="w-8 h-8 bg-primary/20 rounded-lg" />
               </div>
               <div className="absolute top-1/4 -left-6 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-100">
-                <div className="w-7 h-7 bg-cyan/20 rounded-lg" />
+                <SiKalilinux className="w-7 h-7 text-cyan" />
               </div>
               <div className="absolute bottom-1/4 -right-8 w-14 h-14 bg-card border border-border rounded-2xl flex items-center justify-center shadow-lg animate-float delay-200">
                 <div className="w-7 h-7 bg-primary/20 rounded-lg" />
