@@ -156,17 +156,23 @@ export function About() {
         </div>
 
         {/* Bio */}
-        <div className="max-w-4xl mx-auto text-center animate-in fade-in duration-700">
+        <div className="max-w-4xl mx-auto text-center animate-in fade-in duration-700 space-y-4">
           <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
-            I'm Karthikeyan, a <span className="text-foreground font-semibold">Cybersecurity Researcher, Investigator, and Educator</span> based in Chennai, India. 
-            I lead <span className="text-primary font-semibold">Cappricio Securities</span>, a cybersecurity consulting firm focused on discovering and 
-            securing vulnerabilities across various platforms. With hands-on experience securing major platforms like Android OS, Google, Microsoft, Facebook, 
-            Snapchat, and Upwork, my mission extends beyond just finding weaknesses—I work to fortify these systems against potential cyber threats.
+            I'm <strong className="text-foreground font-semibold">Udhayakumar</strong>, a Cybersecurity Researcher, Investigator, and Educator based in Erode, India. 
+            I lead <strong className="text-primary font-semibold">Geetorus</strong>, a cybersecurity consulting firm focused on discovering vulnerabilities, preventing cyber attacks, and 
+            strengthening digital systems across multiple platforms including web, mobile, networks, and cloud environments. 
+            My work revolves around securing organizations and users from real-world threats through proactive defense and continuous research.
           </p>
-          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed mt-4 sm:mt-6">
-            In addition to my consulting work, I have trained over <span className="text-cyan font-semibold">25,000 students</span> across India, 
-            equipping the next generation with practical cybersecurity skills and knowledge to tackle real-world challenges. My goal is to make your 
-            digital experience safe from malicious actors and empower others to do the same.
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
+            With hands-on experience in ethical hacking, penetration testing, and digital forensics, 
+            I design and develop custom security tools and implement modern protection strategies for businesses and individuals. 
+            I believe that cybersecurity is not just about fixing weaknesses—it's about building systems that can withstand evolving threats.
+          </p>
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
+            Alongside my consulting work, I have trained over <strong className="text-cyan font-semibold">700+ students</strong> across India through workshops, seminars,  
+            and cyber awareness programs. I focus on practical skill development, helping the next generation of cybersecurity 
+            professionals prepare for real-world challenges. My mission is to secure digital experiences and empower others to 
+            become protectors of the cyber world.
           </p>
         </div>
       </div>
