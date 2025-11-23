@@ -1,4 +1,4 @@
-import { SiMedium, SiLinkedin, SiYoutube, SiInstagram } from "react-icons/si";
+import { SiMedium, SiLinkedin, SiInstagram, SiGit } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
 
 export function Footer() {
@@ -13,9 +13,9 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 flex-wrap">
             <a
-              href="https://medium.com"
+              href="https://medium.com/geetorus"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
@@ -24,7 +24,16 @@ export function Footer() {
               <SiMedium className="w-6 h-6" />
             </a>
             <a
-              href="https://x.com"
+              href="https://github.com/Unkownboy0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
+              data-testid="link-footer-github"
+            >
+              <SiGit className="w-6 h-6" />
+            </a>
+            <a
+              href="https://x.com/geetorus"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
@@ -33,7 +42,7 @@ export function Footer() {
               <FaXTwitter className="w-6 h-6" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/_geetorus_"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
@@ -42,22 +51,13 @@ export function Footer() {
               <SiInstagram className="w-6 h-6" />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/udhaya-uk-27a2402b8/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
               data-testid="link-footer-linkedin"
             >
               <SiLinkedin className="w-6 h-6" />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover-elevate active-elevate-2 p-3 rounded-lg transition-all"
-              data-testid="link-footer-youtube"
-            >
-              <SiYoutube className="w-6 h-6" />
             </a>
           </div>
 

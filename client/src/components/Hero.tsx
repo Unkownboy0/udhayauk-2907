@@ -67,6 +67,15 @@ export function Hero() {
                   <SiGit className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
                 </a>
                 <a
+                  href="https://x.com/geetorus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover-elevate active-elevate-2 p-1.5 sm:p-2 rounded-lg transition-all"
+                  data-testid="link-twitter"
+                >
+                  <FaXTwitter className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
+                </a>
+                <a
                   href="https://instagram.com/_geetorus_"
                   target="_blank"
                   rel="noopener noreferrer"
