@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { LogoCarousel } from "@/components/LogoCarousel";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Portfolio } from "@/components/Portfolio";
@@ -16,7 +15,6 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
-      <LogoCarousel />
       <About />
       <Services />
       <Portfolio />
