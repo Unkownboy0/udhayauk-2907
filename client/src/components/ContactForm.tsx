@@ -14,7 +14,6 @@ export function ContactForm() {
     phone: "",
     subject: "",
     message: "",
-    courseInterest: "",
   });
 
   const mutation = useMutation({
@@ -35,7 +34,6 @@ export function ContactForm() {
         phone: "",
         subject: "",
         message: "",
-        courseInterest: "",
       });
     },
     onError: () => {
@@ -144,34 +142,7 @@ export function ContactForm() {
                 />
               </div>
 
-              <div>
-                <label
-                  htmlFor="courseInterest"
-                  className="block text-sm font-medium mb-2"
-                  data-testid="label-course"
-                >
-                  Course Interest
-                </label>
-                <select
-                  id="courseInterest"
-                  name="courseInterest"
-                  value={formData.courseInterest}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:outline-none transition"
-                  data-testid="select-course"
-                >
-                  <option value="">Select a course</option>
-                  <option value="Application Security">
-                    Application Security
-                  </option>
-                  <option value="Bug Bounty">Bug Bounty</option>
-                  <option value="Cyber Crime Investigation">
-                    Cyber Crime Investigation
-                  </option>
-                  <option value="Other">Other</option>
-                </select>
               </div>
-            </div>
 
             <div>
               <label
