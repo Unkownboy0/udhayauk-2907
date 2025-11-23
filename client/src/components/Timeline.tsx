@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 interface TimelineEvent {
   id: string;
   title: string;
@@ -18,132 +16,20 @@ const timelineEvents: TimelineEvent[] = [
   { id: "07", title: "Alameen Engineering College - Erode", date: "TBD", detail: "Awareness Program", align: "right" },
 ];
 
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  radius: number;
-  opacity: number;
-}
-
 export function Timeline() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    };
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-
-    const particles: Particle[] = Array.from({ length: 40 }, () => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.5,
-      vy: (Math.random() - 0.5) * 0.5,
-      radius: Math.random() * 2 + 1,
-      opacity: Math.random() * 0.5 + 0.3,
-    }));
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach((particle) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
-
-        particle.x = Math.max(0, Math.min(canvas.width, particle.x));
-        particle.y = Math.max(0, Math.min(canvas.height, particle.y));
-
-        ctx.fillStyle = `rgba(0, 206, 209, ${particle.opacity})`;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        ctx.fill();
-      });
-
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 120) {
-            ctx.strokeStyle = `rgba(0, 206, 209, ${0.2 * (1 - distance / 120)})`;
-            ctx.lineWidth = 0.5;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-
-      requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => window.removeEventListener("resize", resizeCanvas);
-  }, []);
-
   return (
     <>
       <style>{`
         .timeline-scroll {
-          scrollbar-width: thin;
-          scrollbar-color: rgba(255,255,255,0.18) transparent;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
         }
         .timeline-scroll::-webkit-scrollbar {
-          width: 10px;
-        }
-        .timeline-scroll::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .timeline-scroll::-webkit-scrollbar-thumb {
-          background-color: rgba(255,255,255,0.18);
-          border-radius: 8px;
-          border: 2px solid transparent;
-          background-clip: padding-box;
-        }
-        .dark .timeline-scroll::-webkit-scrollbar-thumb {
-          background-color: rgba(255,255,255,0.18);
-        }
-        @media (max-width: 640px) {
-          .timeline-scroll::-webkit-scrollbar {
-            width: 8px;
-          }
+          display: none;
         }
       `}</style>
 
       <section id="timeline" className="relative bg-background py-24" data-testid="section-timeline">
-        <div className="absolute inset-0 pointer-events-none z-0">
-          <canvas
-            ref={canvasRef}
-            data-generated="true"
-            aria-hidden="true"
-            style={{
-              width: "100%",
-              height: "100%",
-              backgroundColor: "transparent",
-              backgroundPosition: "100% 100%",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "20%",
-              pointerEvents: "none",
-            }}
-          />
-        </div>
-
         <div className="relative z-10 px-6 lg:px-32 flex flex-col items-center justify-center pb-20 text-foreground">
           <h1 className="text-4xl lg:text-5xl font-bold text-center mb-4">Time Line</h1>
           <div className="w-32 h-1 bg-cyan mx-auto mb-4" />
@@ -152,7 +38,7 @@ export function Timeline() {
           </p>
 
           <div className="w-full max-w-6xl">
-            <div className="w-full max-h-[65vh] overflow-y-auto mt-10 lg:mt-20 pr-4 timeline-scroll">
+            <div className="w-full max-h-[65vh] overflow-y-auto mt-10 lg:mt-20 timeline-scroll">
               {timelineEvents.map((event, idx) => (
                 <div key={event.id + idx} className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 mb-8">
                   {event.align === "left" ? (
