@@ -137,7 +137,9 @@ export function Portfolio() {
                   </div>
 
                   <p className="text-xs sm:text-sm text-foreground/70 line-clamp-3 mb-4 leading-relaxed">
-                    {project.description || "No description available"}
+                    {project.name?.toLowerCase().includes("mobiletaker") 
+                      ? "Mobiletaker is an all-in-one mobile hacking and recovery framework built using Python. It helps perform security testing on Android devices easily using ADB-based modules."
+                      : (project.description || "No description available")}
                   </p>
 
                   <div className="flex items-center justify-between pt-4 border-t border-border/50">

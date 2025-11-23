@@ -250,10 +250,10 @@ export class MemStorage implements IStorage {
 
     // Initialize Stats
     this.stats = {
-      experience: "10+",
-      projects: "70+",
-      completed: "1000+",
-      clients: "1000+",
+      experience: "3",
+      projects: "70",
+      completed: "100",
+      clients: "700",
     };
 
     // Initialize Contact Forms
