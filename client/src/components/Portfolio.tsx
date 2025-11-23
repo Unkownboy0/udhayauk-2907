@@ -43,10 +43,6 @@ export function Portfolio() {
   return (
     <section id="portfolio" className="py-24 bg-background" data-testid="section-portfolio">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold">Portfolio</h2>
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems?.map((item) => (
             <a
