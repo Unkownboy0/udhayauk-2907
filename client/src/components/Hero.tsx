@@ -21,7 +21,7 @@ export function Hero() {
           <div className="flex flex-col justify-center items-center lg:items-start lg:pr-6 animate-in fade-in slide-in-from-left duration-700">
             <div className="w-full mb-3 sm:mb-4 md:mb-6">
               <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-bold text-center lg:text-left">
-                👋 Hi, I'm <span className="text-cyan font-semibold">Udhayakumar</span>
+                👋 Hi, I'm <span className="font-semibold text-[#00f7fa]">Udhayakumar V</span>
               </p>
             </div>
 
