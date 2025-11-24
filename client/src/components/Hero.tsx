@@ -98,8 +98,7 @@ export function Hero() {
 
             <div className="flex gap-2 sm:gap-3 md:gap-4 mt-3 sm:mt-4 md:mt-6 justify-center lg:justify-start w-full">
               <Button
-                variant="outline"
-                className="rounded-full px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-xs sm:text-sm md:text-lg whitespace-nowrap"
+                className="bg-[#93eaedbf] text-[#000000] font-semibold rounded-full px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-xs sm:text-sm md:text-lg whitespace-nowrap"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/Udhayakumar_Resume.pdf';
