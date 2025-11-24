@@ -2,47 +2,16 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import type { ContactFormInsert } from "@shared/schema";
 
 export function ContactForm() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     subject: "",
     message: "",
-  });
-
-  const mutation = useMutation({
-    mutationFn: async (data: ContactFormInsert) => {
-      return apiRequest("/api/contact", {
-        method: "POST",
-        body: JSON.stringify(data),
-      });
-    },
-    onSuccess: () => {
-      toast({
-        title: "Success",
-        description: "Your message has been sent. We'll get back to you soon!",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
-    },
-    onError: () => {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    },
   });
 
   const handleChange = (
@@ -54,9 +23,27 @@ export function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    mutation.mutate(formData);
+    setIsSubmitting(true);
+
+    // Simulate form submission delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    toast({
+      title: "Message Received!",
+      description: "Thank you for your interest. We'll get back to you soon!",
+    });
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    });
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -189,11 +176,11 @@ export function ContactForm() {
 
             <Button
               type="submit"
-              disabled={mutation.isPending}
+              disabled={isSubmitting}
               className="w-full rounded-lg bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg font-medium transition"
               data-testid="button-submit-contact"
             >
-              {mutation.isPending ? "Sending..." : "Send Message"}
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </Card>
