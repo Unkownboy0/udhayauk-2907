@@ -1,8 +1,8 @@
 [build]
-  # Build command - runs from the client directory
+  # Build command - installs client dependencies and builds the frontend
   command = "cd client && npm install && npm run build"
   
-  # Publish directory - where the built files are located
+  # Publish directory - where Vite outputs the built files (from project root)
   publish = "dist/public"
 
 # Redirect all routes to index.html for client-side routing (SPA)
